@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_6">
+    <item row="2" column="0" rowspan="2" colspan="8">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="5" column="5">
+       <widget class="QWidget" name="widget_34" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QWidget" name="widget_18" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QWidget" name="widget_20" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="6">
+       <widget class="QWidget" name="widget_29" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QWidget" name="widget_10" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QWidget" name="widget_19" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QWidget" name="widget_13" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QWidget" name="widget_27" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QWidget" name="widget_28" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QWidget" name="widget_17" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QWidget" name="widget_5" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QWidget" name="widget_22" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QWidget" name="widget_25" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QWidget" name="widget_9" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QWidget" name="widget_21" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="4">
+       <widget class="QWidget" name="widget_33" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QWidget" name="widget" native="true">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QWidget" name="widget_26" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="6">
+       <widget class="QWidget" name="widget_35" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QWidget" name="widget_12" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QWidget" name="widget_7" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QWidget" name="widget_24" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QWidget" name="widget_6" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6">
+       <widget class="QWidget" name="widget_23" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QWidget" name="widget_32" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QWidget" name="widget_31" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QWidget" name="widget_15" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QWidget" name="widget_16" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QWidget" name="widget_30" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QWidget" name="widget_8" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QWidget" name="widget_11" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QWidget" name="widget_14" native="true">
+        <property name="styleSheet">
+         <string notr="true">border-width: 2px;
+border-style: solid;
+border-color: black;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Poniedziałek</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Wtorek</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_6">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Środa</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_5">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Czwartek</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Piątek</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Sobota</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Niedziela</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menumenu">
+    <property name="title">
+     <string>menu</string>
+    </property>
+   </widget>
+   <addaction name="menumenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionstrza_ka_w_gore"/>
+   <addaction name="actionstrza_ka_w_d"/>
+   <addaction name="actionmiesiac_i_rok"/>
+  </widget>
+  <action name="actionstrza_ka_w_gore">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/rec/C:/Users/jaswr/Downloads/strzalkawgore.png</normaloff>:/rec/C:/Users/jaswr/Downloads/strzalkawgore.png</iconset>
+   </property>
+   <property name="text">
+    <string>strzałka_w_gore</string>
+   </property>
+  </action>
+  <action name="actionstrza_ka_w_d">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/rec/C:/Users/jaswr/Downloads/pobrane.png</normaloff>:/rec/C:/Users/jaswr/Downloads/pobrane.png</iconset>
+   </property>
+   <property name="text">
+    <string>strzałka_w_dół</string>
+   </property>
+  </action>
+  <action name="actionmiesiac_i_rok">
+   <property name="text">
+    <string>miesiac_i_rok</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

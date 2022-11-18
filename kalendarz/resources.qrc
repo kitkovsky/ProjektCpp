@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>C:/Users/jaswr/Downloads/pobrane.png</file>
+        <file>C:/Users/jaswr/Downloads/strzalkawgore.png</file>
+    </qresource>
+</RCC>
