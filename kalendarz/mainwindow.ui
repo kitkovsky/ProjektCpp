@@ -488,7 +488,7 @@ border-color: black;</string>
   <action name="actionstrza_ka_w_gore">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/rec/C:/Users/jaswr/Downloads/strzalkawgore.png</normaloff>:/rec/C:/Users/jaswr/Downloads/strzalkawgore.png</iconset>
+     <normaloff>:/img/strzalkawgore.png</normaloff>:/img/strzalkawgore.png</iconset>
    </property>
    <property name="text">
     <string>strzałka_w_gore</string>
@@ -497,7 +497,7 @@ border-color: black;</string>
   <action name="actionstrza_ka_w_d">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/rec/C:/Users/jaswr/Downloads/pobrane.png</normaloff>:/rec/C:/Users/jaswr/Downloads/pobrane.png</iconset>
+     <normaloff>:/img/pobrane.png</normaloff>:/img/pobrane.png</iconset>
    </property>
    <property name="text">
     <string>strzałka_w_dół</string>
