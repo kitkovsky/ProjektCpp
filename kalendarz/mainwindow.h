@@ -1,7 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "kafelek.h"
+
 #include <QMainWindow>
+#include <array>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +20,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    std::array<std::array<Kafelek*, 7>, 5> kafelki;
+
+    void inicjuj_kafelki();
 };
 #endif // MAINWINDOW_H

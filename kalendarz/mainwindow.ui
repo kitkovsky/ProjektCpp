@@ -18,7 +18,7 @@
     <item row="2" column="0" rowspan="2" colspan="8">
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="5" column="5">
-       <widget class="QWidget" name="widget_34" native="true">
+       <widget class="Kafelek" name="kafelek_45" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -27,7 +27,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QWidget" name="widget_18" native="true">
+       <widget class="Kafelek" name="kafelek_21" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -36,7 +36,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="3" column="3">
-       <widget class="QWidget" name="widget_20" native="true">
+       <widget class="Kafelek" name="kafelek_23" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -45,7 +45,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="4" column="6">
-       <widget class="QWidget" name="widget_29" native="true">
+       <widget class="Kafelek" name="kafelek_36" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -54,7 +54,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="1" column="6">
-       <widget class="QWidget" name="widget_10" native="true">
+       <widget class="Kafelek" name="kafelek_06" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -63,7 +63,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="3" column="2">
-       <widget class="QWidget" name="widget_19" native="true">
+       <widget class="Kafelek" name="kafelek_22" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -72,7 +72,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QWidget" name="widget_4" native="true">
+       <widget class="Kafelek" name="kafelek_12" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -81,7 +81,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="5" column="0">
-       <widget class="QWidget" name="widget_13" native="true">
+       <widget class="Kafelek" name="kafelek_40" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -90,7 +90,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="4" column="4">
-       <widget class="QWidget" name="widget_27" native="true">
+       <widget class="Kafelek" name="kafelek_34" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -99,7 +99,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="4" column="5">
-       <widget class="QWidget" name="widget_28" native="true">
+       <widget class="Kafelek" name="kafelek_35" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -108,7 +108,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="2" column="6">
-       <widget class="QWidget" name="widget_17" native="true">
+       <widget class="Kafelek" name="kafelek_16" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -117,7 +117,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QWidget" name="widget_5" native="true">
+       <widget class="Kafelek" name="kafelek_11" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -126,7 +126,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QWidget" name="widget_3" native="true">
+       <widget class="Kafelek" name="kafelek_02" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -135,7 +135,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="3" column="5">
-       <widget class="QWidget" name="widget_22" native="true">
+       <widget class="Kafelek" name="kafelek_25" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -144,7 +144,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="4" column="2">
-       <widget class="QWidget" name="widget_25" native="true">
+       <widget class="Kafelek" name="kafelek_32" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -153,7 +153,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="1" column="5">
-       <widget class="QWidget" name="widget_9" native="true">
+       <widget class="Kafelek" name="kafelek_05" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -162,7 +162,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="3" column="4">
-       <widget class="QWidget" name="widget_21" native="true">
+       <widget class="Kafelek" name="kafelek_24" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -171,7 +171,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="5" column="4">
-       <widget class="QWidget" name="widget_33" native="true">
+       <widget class="Kafelek" name="kafelek_44" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -180,7 +180,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QWidget" name="widget" native="true">
+       <widget class="Kafelek" name="kafelek_00" native="true">
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
         </property>
@@ -192,7 +192,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QWidget" name="widget_2" native="true">
+       <widget class="Kafelek" name="kafelek_01" native="true">
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
         </property>
@@ -204,7 +204,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="4" column="3">
-       <widget class="QWidget" name="widget_26" native="true">
+       <widget class="Kafelek" name="kafelek_33" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -213,7 +213,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="5" column="6">
-       <widget class="QWidget" name="widget_35" native="true">
+       <widget class="Kafelek" name="kafelek_46" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -222,7 +222,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="4" column="0">
-       <widget class="QWidget" name="widget_12" native="true">
+       <widget class="Kafelek" name="kafelek_30" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -231,7 +231,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QWidget" name="widget_7" native="true">
+       <widget class="Kafelek" name="kafelek_03" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -240,7 +240,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QWidget" name="widget_24" native="true">
+       <widget class="Kafelek" name="kafelek_31" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -249,7 +249,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QWidget" name="widget_6" native="true">
+       <widget class="Kafelek" name="kafelek_10" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -258,7 +258,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="3" column="6">
-       <widget class="QWidget" name="widget_23" native="true">
+       <widget class="Kafelek" name="kafelek_26" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -267,7 +267,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="5" column="3">
-       <widget class="QWidget" name="widget_32" native="true">
+       <widget class="Kafelek" name="kafelek_43" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -276,7 +276,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="5" column="2">
-       <widget class="QWidget" name="widget_31" native="true">
+       <widget class="Kafelek" name="kafelek_42" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -285,7 +285,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="2" column="4">
-       <widget class="QWidget" name="widget_15" native="true">
+       <widget class="Kafelek" name="kafelek_14" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -294,7 +294,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="2" column="5">
-       <widget class="QWidget" name="widget_16" native="true">
+       <widget class="Kafelek" name="kafelek_15" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -303,7 +303,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QWidget" name="widget_30" native="true">
+       <widget class="Kafelek" name="kafelek_41" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -312,7 +312,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="1" column="4">
-       <widget class="QWidget" name="widget_8" native="true">
+       <widget class="Kafelek" name="kafelek_04" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -321,7 +321,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="3" column="0">
-       <widget class="QWidget" name="widget_11" native="true">
+       <widget class="Kafelek" name="kafelek_20" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -330,7 +330,7 @@ border-color: black;</string>
        </widget>
       </item>
       <item row="2" column="3">
-       <widget class="QWidget" name="widget_14" native="true">
+       <widget class="Kafelek" name="kafelek_13" native="true">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
 border-style: solid;
@@ -509,6 +509,14 @@ border-color: black;</string>
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Kafelek</class>
+   <extends>QWidget</extends>
+   <header>kafelek.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>
