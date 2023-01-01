@@ -18,11 +18,15 @@ public:
         data = d;
     }
     void paintEvent(QPaintEvent *event);
+    void set_displayed_month(int m)
+    {
+        displayed_month = m;
+    }
 signals:
 
 private:
     QDate data = QDate(2022, 12, 9);
-
+    int displayed_month;
 };
 
 #endif // KAFELEK_H

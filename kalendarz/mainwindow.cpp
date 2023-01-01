@@ -56,13 +56,19 @@ void MainWindow::inicjuj_kafelki()
     QDate today = QDate::currentDate();
     auto day_of_weak = today.dayOfWeek();
     auto day_of_month = today.day();
+//    auto row_today = (day_of_month-1)/7;
+//    auto column_today = (day_of_weak-1)%7;
+    QDate first_of_month = today.addDays(-day_of_month+1);
+    QDate first_displayed = first_of_month.addDays(-(first_of_month.dayOfWeek() -1));
+
 
     for(int wiersz = 0; wiersz < (int)kafelki.size();++wiersz)
     {
         for(int kolumna = 0; kolumna < (int)kafelki[0].size();++kolumna)
         {
-
-            kafelki[wiersz][kolumna]->set_date(QDate(2020, 12, (wiersz*7+kolumna)%31 +1));
+            kafelki[wiersz][kolumna]->set_date(first_displayed);
+            kafelki[wiersz][kolumna]->set_displayed_month(today.month());
+            first_displayed = first_displayed.addDays(1);
         }
     }
 
