@@ -21,6 +21,9 @@ public:
 private:
     Ui::MainWindow *ui;
 
+    int month = QDate::currentDate().month();
+    int year = QDate::currentDate().year();
+
     std::array<std::array<Kafelek*, 7>, 5> kafelki;
 
     void inicjuj_kafelki();

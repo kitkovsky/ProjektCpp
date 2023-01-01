@@ -1,6 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDate>
+#include <string>
+
+std::array<QString, 12> month_tab
+
+{
+    "styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrześień", "pażdziernik", "listopad", "grudzień"
+};
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     inicjuj_kafelki();
+    ui->action_rok->setText(std::to_string(year).c_str());
+    ui->action_miesiac->setText(month_tab[month-1]);
 }
 
 MainWindow::~MainWindow()

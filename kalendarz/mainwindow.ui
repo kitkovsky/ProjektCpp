@@ -481,31 +481,49 @@ border-color: black;</string>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionstrza_ka_w_gore"/>
-   <addaction name="actionstrza_ka_w_d"/>
-   <addaction name="actionmiesiac_i_rok"/>
+   <addaction name="action_strzalka_w_gore"/>
+   <addaction name="action_strzalka_w_dol"/>
+   <addaction name="action_miesiac"/>
+   <addaction name="action_rok"/>
   </widget>
-  <action name="actionstrza_ka_w_gore">
+  <action name="action_strzalka_w_gore">
    <property name="icon">
     <iconset resource="resources.qrc">
      <normaloff>:/img/strzalkawgore.png</normaloff>:/img/strzalkawgore.png</iconset>
    </property>
    <property name="text">
-    <string>strzałka_w_gore</string>
+    <string>strzalka_w_gore</string>
+   </property>
+   <property name="toolTip">
+    <string>strzalka w gore</string>
    </property>
   </action>
-  <action name="actionstrza_ka_w_d">
+  <action name="action_strzalka_w_dol">
    <property name="icon">
     <iconset resource="resources.qrc">
      <normaloff>:/img/pobrane.png</normaloff>:/img/pobrane.png</iconset>
    </property>
    <property name="text">
-    <string>strzałka_w_dół</string>
+    <string>strzalka_w_dol</string>
+   </property>
+   <property name="toolTip">
+    <string>strzałka w dół</string>
    </property>
   </action>
-  <action name="actionmiesiac_i_rok">
+  <action name="action_miesiac">
    <property name="text">
-    <string>miesiac_i_rok</string>
+    <string>miesiac</string>
+   </property>
+   <property name="toolTip">
+    <string>miesiac</string>
+   </property>
+  </action>
+  <action name="action_rok">
+   <property name="text">
+    <string>rok</string>
+   </property>
+   <property name="toolTip">
+    <string>rok</string>
    </property>
   </action>
  </widget>
