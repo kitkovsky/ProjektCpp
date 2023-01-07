@@ -467,6 +467,8 @@ border-color: black;</string>
     <property name="title">
      <string>menu</string>
     </property>
+    <addaction name="actional_ma_kota"/>
+    <addaction name="actionala_ma_kota"/>
    </widget>
    <addaction name="menumenu"/>
   </widget>
@@ -524,6 +526,16 @@ border-color: black;</string>
    </property>
    <property name="toolTip">
     <string>rok</string>
+   </property>
+  </action>
+  <action name="actional_ma_kota">
+   <property name="text">
+    <string>al ma kota</string>
+   </property>
+  </action>
+  <action name="actionala_ma_kota">
+   <property name="text">
+    <string>ala ma kota</string>
    </property>
   </action>
  </widget>

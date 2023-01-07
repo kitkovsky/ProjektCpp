@@ -18,6 +18,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_action_strzalka_w_gore_triggered();
+
+    void on_action_strzalka_w_dol_triggered();
+
 private:
     Ui::MainWindow *ui;
 
@@ -27,5 +32,7 @@ private:
     std::array<std::array<Kafelek*, 7>, 5> kafelki;
 
     void inicjuj_kafelki();
+    void update_toolbar();
+    void update_board();
 };
 #endif // MAINWINDOW_H

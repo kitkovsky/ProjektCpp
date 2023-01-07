@@ -15,8 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     inicjuj_kafelki();
-    ui->action_rok->setText(std::to_string(year).c_str());
-    ui->action_miesiac->setText(month_tab[month-1]);
+    update_toolbar();
 }
 
 MainWindow::~MainWindow()
@@ -62,12 +61,28 @@ void MainWindow::inicjuj_kafelki()
     kafelki[4][5] = ui->kafelek_45;
     kafelki[4][6] = ui->kafelek_46;
 
-    QDate today = QDate::currentDate();
-    auto day_of_weak = today.dayOfWeek();
-    auto day_of_month = today.day();
+
+update_board();
+
+
+}
+
+void MainWindow::update_toolbar()
+{
+    ui->action_miesiac->setText(month_tab[month-1]);
+    ui->action_rok->setText(std::to_string(year).c_str());
+    update_board();
+    update();
+}
+
+void MainWindow::update_board()
+{
+//    QDate today = QDate::currentDate();
+//    auto day_of_weak = today.dayOfWeek();
+//    auto day_of_month = today.day();
 //    auto row_today = (day_of_month-1)/7;
 //    auto column_today = (day_of_weak-1)%7;
-    QDate first_of_month = today.addDays(-day_of_month+1);
+    QDate first_of_month(year, month, 1);
     QDate first_displayed = first_of_month.addDays(-(first_of_month.dayOfWeek() -1));
 
 
@@ -76,12 +91,35 @@ void MainWindow::inicjuj_kafelki()
         for(int kolumna = 0; kolumna < (int)kafelki[0].size();++kolumna)
         {
             kafelki[wiersz][kolumna]->set_date(first_displayed);
-            kafelki[wiersz][kolumna]->set_displayed_month(today.month());
+            kafelki[wiersz][kolumna]->set_displayed_month(first_of_month.month());
             first_displayed = first_displayed.addDays(1);
         }
     }
 
+}
 
 
+
+void MainWindow::on_action_strzalka_w_gore_triggered()
+{
+    if(month == 12)
+    {
+        month = 0;
+        year ++;
+    }
+    month ++;
+    update_toolbar();
+}
+
+
+void MainWindow::on_action_strzalka_w_dol_triggered()
+{
+    month --;
+    if(month == 0)
+    {
+        month = 12;
+        year --;
+    }
+    update_toolbar();
 }
 
