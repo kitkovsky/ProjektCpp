@@ -77,11 +77,7 @@ void MainWindow::update_toolbar()
 
 void MainWindow::update_board()
 {
-//    QDate today = QDate::currentDate();
-//    auto day_of_weak = today.dayOfWeek();
-//    auto day_of_month = today.day();
-//    auto row_today = (day_of_month-1)/7;
-//    auto column_today = (day_of_weak-1)%7;
+
     QDate first_of_month(year, month, 1);
     QDate first_displayed = first_of_month.addDays(-(first_of_month.dayOfWeek() -1));
 

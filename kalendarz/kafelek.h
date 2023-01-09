@@ -1,6 +1,8 @@
 #ifndef KAFELEK_H
 #define KAFELEK_H
 
+#include "dialog_kafelka.h"
+
 #include <QWidget>
 #include <QDate>
 
@@ -22,6 +24,7 @@ public:
     {
         displayed_month = m;
     }
+    void mousePressEvent(QMouseEvent *event);
 signals:
 
 private:
