@@ -2,9 +2,11 @@
 #define MAINWINDOW_H
 
 #include "kafelek.h"
+#include "wydarzenie.h"
 
 #include <QMainWindow>
 #include <array>
+#include <vector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,6 +19,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void read_events();
+    void write_events();
 
 private slots:
     void on_action_strzalka_w_gore_triggered();
@@ -30,6 +34,8 @@ private:
     int year = QDate::currentDate().year();
 
     std::array<std::array<Kafelek*, 7>, 5> kafelki;
+    std::vector<Wydarzenie> wpisy;
+    QString wydarzenie_filename = "wydarzenia.kjk";
 
     void inicjuj_kafelki();
     void update_toolbar();

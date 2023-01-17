@@ -2,6 +2,7 @@
 #define KAFELEK_H
 
 #include "dialog_kafelka.h"
+#include "wydarzenie.h"
 
 #include <QWidget>
 #include <QDate>
@@ -25,11 +26,13 @@ public:
         displayed_month = m;
     }
     void mousePressEvent(QMouseEvent *event);
+    void dodaj_wpis(const Wydarzenie &w);
 signals:
 
 private:
     QDate data = QDate(2022, 12, 9);
     int displayed_month;
+    std::vector<Wydarzenie>wpisy_kafelka;
 };
 
 #endif // KAFELEK_H

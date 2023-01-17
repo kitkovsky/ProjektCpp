@@ -12,12 +12,14 @@ SOURCES += \
     dialog_kafelka.cpp \
     kafelek.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    wydarzenie.cpp
 
 HEADERS += \
     dialog_kafelka.h \
     kafelek.h \
-    mainwindow.h
+    mainwindow.h \
+    wydarzenie.h
 
 FORMS += \
     dialog_kafelka.ui \

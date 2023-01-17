@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include <QDate>
 #include <string>
+#include "wydarzenie.h"
+#include <QFile>
+#include <QMessageBox>
 
 std::array<QString, 12> month_tab
 
@@ -13,14 +16,56 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
     inicjuj_kafelki();
     update_toolbar();
+    read_events();
 }
 
 MainWindow::~MainWindow()
 {
+    write_events();
     delete ui;
+}
+
+void MainWindow::read_events()
+{
+    QFile file(wydarzenie_filename);
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        QMessageBox::information(this, tr("Unable to open file"),
+                                 file.errorString());
+        return;
+    }
+    QDataStream in(&file);
+    in.setVersion(QDataStream::Qt_DefaultCompiledVersion);
+
+    Wydarzenie w;
+    while(true)
+    {
+        if(in.atEnd()) break;
+        in >> w;
+        wpisy.push_back(w);
+    }
+}
+
+void MainWindow::write_events()
+{
+    QFile file(wydarzenie_filename);
+    if (!file.open(QIODevice::WriteOnly))
+    {
+        QMessageBox::information(this, tr("Unable to open file"),
+                                 file.errorString());
+        return;
+    }
+    QDataStream out(&file);
+    out.setVersion(QDataStream::Qt_DefaultCompiledVersion);
+
+    for(const auto& w : wpisy)
+    {
+        out << w;
+    }
 }
 
 void MainWindow::inicjuj_kafelki()
@@ -91,7 +136,7 @@ void MainWindow::update_board()
             first_displayed = first_displayed.addDays(1);
         }
     }
-
+    kafelki[0][0]->dodaj_wpis(Wydarzenie(first_of_month, QTime(10,10), "ala ma kota"));
 }
 
 
