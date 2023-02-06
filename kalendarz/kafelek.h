@@ -19,12 +19,15 @@ public:
     {
         data = d;
     }
-    void paintEvent(QPaintEvent *event);
+    void paintEvent(QPaintEvent *event) override;
+    void enterEvent(QEnterEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
+
     void set_displayed_month(int m)
     {
         displayed_month = m;
     }
-    void mousePressEvent(QMouseEvent *event);
     void dodaj_wpis(const Wydarzenie &w);
 
     void set_wydarzenia(std::vector<Wydarzenie> wydarzenia);
@@ -39,6 +42,7 @@ private:
     QDate data = QDate(2022, 12, 9);
     int displayed_month;
     std::vector<Wydarzenie>wpisy_kafelka;
+    bool hover = false;
 };
 
 #endif // KAFELEK_H

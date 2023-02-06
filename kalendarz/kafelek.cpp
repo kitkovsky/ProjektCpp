@@ -14,7 +14,7 @@ Kafelek::Kafelek(QWidget *parent)
 void Kafelek::paintEvent(QPaintEvent *event)
 {
     const int font_size = 15;
-    QBrush background(QColor("azure"));
+    QBrush background(QColor(hover ? "#4891b4" : "azure" ));
 
     QPainter painter(this);
     painter.setFont(QFont("Arial",font_size));
@@ -22,7 +22,12 @@ void Kafelek::paintEvent(QPaintEvent *event)
     bool paint_today = data == QDate::currentDate();
     if(data.month() != displayed_month)
     {
-        background.setColor("lightgrey");
+        if(hover)
+        {
+            background.setColor("#4891b4");
+        }
+        else
+            background.setColor("lightgrey");
     }
     if(paint_today)
     {
@@ -43,6 +48,16 @@ void Kafelek::paintEvent(QPaintEvent *event)
         numer_wpisu ++;
     }
 
+}
+
+void Kafelek::enterEvent(QEnterEvent *event)
+{
+    hover = true;
+}
+
+void Kafelek::leaveEvent(QEvent *event)
+{
+    hover = false;
 }
 
 void Kafelek::mousePressEvent(QMouseEvent *event)
