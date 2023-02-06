@@ -18,9 +18,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     ui->setupUi(this);
+    read_events();
     inicjuj_kafelki();
     update_toolbar();
-    read_events();
 }
 
 MainWindow::~MainWindow()
@@ -106,10 +106,14 @@ void MainWindow::inicjuj_kafelki()
     kafelki[4][5] = ui->kafelek_45;
     kafelki[4][6] = ui->kafelek_46;
 
-
-update_board();
-
-
+    for(int wiersz = 0; wiersz < (int)kafelki.size();++wiersz)
+    {
+        for(int kolumna = 0; kolumna < (int)kafelki[0].size();++kolumna)
+        {
+            connect(kafelki[wiersz][kolumna], &Kafelek::wydarzenie_changed, this, &MainWindow::wydarzenie_accepted);
+        }
+    }
+    update_board();
 }
 
 void MainWindow::update_toolbar()
@@ -122,10 +126,8 @@ void MainWindow::update_toolbar()
 
 void MainWindow::update_board()
 {
-
     QDate first_of_month(year, month, 1);
     QDate first_displayed = first_of_month.addDays(-(first_of_month.dayOfWeek() -1));
-
 
     for(int wiersz = 0; wiersz < (int)kafelki.size();++wiersz)
     {
@@ -133,10 +135,28 @@ void MainWindow::update_board()
         {
             kafelki[wiersz][kolumna]->set_date(first_displayed);
             kafelki[wiersz][kolumna]->set_displayed_month(first_of_month.month());
+            auto wpisy = find_wpisy(first_displayed);
+            kafelki[wiersz][kolumna]->set_wydarzenia(wpisy);
             first_displayed = first_displayed.addDays(1);
         }
     }
-    kafelki[0][0]->dodaj_wpis(Wydarzenie(first_of_month, QTime(10,10), "ala ma kota"));
+    update();
+}
+
+std::vector<Wydarzenie> MainWindow::find_wpisy(QDate date)
+{
+    std::vector<Wydarzenie> wpisy_dnia;
+    for(const auto & wpis:wpisy)
+    {
+        if(wpis.getDate() == date)
+        {
+            wpisy_dnia.push_back(wpis);
+        }
+    }
+    std::sort(begin(wpisy_dnia), end(wpisy_dnia), [](Wydarzenie a, Wydarzenie b){
+        return a.getTimeStart() < b.getTimeStart();
+    });
+    return wpisy_dnia;
 }
 
 
@@ -162,5 +182,41 @@ void MainWindow::on_action_strzalka_w_dol_triggered()
         year --;
     }
     update_toolbar();
+}
+
+void MainWindow::wydarzenie_accepted(Wydarzenie wydarzenie)
+{
+    bool znalezniono = false;
+    for(int i = 0; i < wpisy.size(); i++)
+    {
+        auto& wpis = wpisy[i];
+        if(wpis.getDate() == wydarzenie.getDate() and wpis.getTimeStart() == wydarzenie.getTimeStart() and wpis.getTimeEnd() == wydarzenie.getTimeEnd())
+        {
+            wpis = wydarzenie;
+            if (wpis.getText().isEmpty())
+            {
+                wpisy.erase(wpisy.begin() + 1);
+            }
+            znalezniono = true;
+            break;
+        }
+    }
+    if(! znalezniono)
+    {
+        wpisy.push_back(wydarzenie);
+    }
+    repaint();
+}
+
+
+void MainWindow::on_actional_ma_kota_triggered()
+{
+    QFile file(wydarzenie_filename);
+    auto button = QMessageBox::question(this, "Question", "Reset the calendar database?");
+    if (button == QMessageBox::Yes)
+    {
+        file.remove();
+        wpisy.clear();        update_board();
+    }
 }
 

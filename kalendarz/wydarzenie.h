@@ -9,7 +9,7 @@
 class Wydarzenie
 {
 public:
-    Wydarzenie(QDate date,QTime time,QString text);
+    Wydarzenie(QDate date,QTime timestart, QTime timeend,QString text);
     Wydarzenie();
     friend QDataStream& operator<<( QDataStream &out, const Wydarzenie& dane );
 
@@ -18,15 +18,19 @@ public:
     const QDate &getDate() const;
     void setDate(const QDate &newDate);
 
-    const QTime &getTime() const;
-    void setTime(const QTime &newTime);
+    const QTime &getTimeStart() const;
+    void setTimeStart(const QTime &newTime);
+
+    const QTime &getTimeEnd() const;
+    void setTimeEnd(const QTime &newTime);
 
     const QString &getText() const;
     void setText(const QString &newText);
 
 private:
     QDate date;
-    QTime time;
+    QTime time_start;
+    QTime time_end;
     QString text;
 
 };

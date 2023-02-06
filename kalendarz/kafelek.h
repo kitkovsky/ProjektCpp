@@ -1,7 +1,6 @@
 #ifndef KAFELEK_H
 #define KAFELEK_H
 
-#include "dialog_kafelka.h"
 #include "wydarzenie.h"
 
 #include <QWidget>
@@ -11,10 +10,10 @@ class Kafelek : public QWidget
 {
     Q_OBJECT
 public:
-    explicit Kafelek(QWidget *parent = nullptr);
+    Kafelek(QWidget *parent = nullptr);
     QDate get_date() const
     {
-     return data;
+        return data;
     }
     void set_date(QDate d)
     {
@@ -27,7 +26,14 @@ public:
     }
     void mousePressEvent(QMouseEvent *event);
     void dodaj_wpis(const Wydarzenie &w);
+
+    void set_wydarzenia(std::vector<Wydarzenie> wydarzenia);
+
 signals:
+    void wydarzenie_changed(Wydarzenie wydarzenie);
+
+public slots:
+    void wydarzenie_accepted(Wydarzenie wydarzenie);
 
 private:
     QDate data = QDate(2022, 12, 9);

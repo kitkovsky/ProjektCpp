@@ -27,6 +27,10 @@ private slots:
 
     void on_action_strzalka_w_dol_triggered();
 
+    void wydarzenie_accepted(Wydarzenie wydarzenie);
+
+    void on_actional_ma_kota_triggered();
+
 private:
     Ui::MainWindow *ui;
 
@@ -40,5 +44,6 @@ private:
     void inicjuj_kafelki();
     void update_toolbar();
     void update_board();
+    std::vector<Wydarzenie>find_wpisy(QDate date);
 };
 #endif // MAINWINDOW_H
