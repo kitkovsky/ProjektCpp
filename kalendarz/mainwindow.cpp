@@ -1,39 +1,34 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+
 #include <QDate>
-#include <string>
-#include "wydarzenie.h"
 #include <QFile>
 #include <QMessageBox>
+#include <string>
+
+#include "ui_mainwindow.h"
+#include "wydarzenie.h"
 
 std::array<QString, 12> month_tab
 
-{
-    "styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrześień", "pażdziernik", "listopad", "grudzień"
-};
+    {"styczeń", "luty",     "marzec",   "kwiecień",    "maj",      "czerwiec",
+     "lipiec",  "sierpień", "wrześień", "pażdziernik", "listopad", "grudzień"};
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
-
+    : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     read_events();
     inicjuj_kafelki();
     update_toolbar();
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     write_events();
     delete ui;
 }
 
-void MainWindow::read_events()
-{
+void MainWindow::read_events() {
     QFile file(wydarzenie_filename);
-    if (!file.open(QIODevice::ReadOnly))
-    {
+    if (!file.open(QIODevice::ReadOnly)) {
         QMessageBox::information(this, tr("Unable to open file"),
                                  file.errorString());
         return;
@@ -42,19 +37,17 @@ void MainWindow::read_events()
     in.setVersion(QDataStream::Qt_DefaultCompiledVersion);
 
     Wydarzenie w;
-    while(true)
-    {
-        if(in.atEnd()) break;
+    while (true) {
+        if (in.atEnd())
+            break;
         in >> w;
         wpisy.push_back(w);
     }
 }
 
-void MainWindow::write_events()
-{
+void MainWindow::write_events() {
     QFile file(wydarzenie_filename);
-    if (!file.open(QIODevice::WriteOnly))
-    {
+    if (!file.open(QIODevice::WriteOnly)) {
         QMessageBox::information(this, tr("Unable to open file"),
                                  file.errorString());
         return;
@@ -62,14 +55,12 @@ void MainWindow::write_events()
     QDataStream out(&file);
     out.setVersion(QDataStream::Qt_DefaultCompiledVersion);
 
-    for(const auto& w : wpisy)
-    {
+    for (const auto &w : wpisy) {
         out << w;
     }
 }
 
-void MainWindow::inicjuj_kafelki()
-{
+void MainWindow::inicjuj_kafelki() {
     kafelki[0][0] = ui->kafelek_00;
     kafelki[0][1] = ui->kafelek_01;
     kafelki[0][2] = ui->kafelek_02;
@@ -106,35 +97,32 @@ void MainWindow::inicjuj_kafelki()
     kafelki[4][5] = ui->kafelek_45;
     kafelki[4][6] = ui->kafelek_46;
 
-    for(int wiersz = 0; wiersz < (int)kafelki.size();++wiersz)
-    {
-        for(int kolumna = 0; kolumna < (int)kafelki[0].size();++kolumna)
-        {
-            connect(kafelki[wiersz][kolumna], &Kafelek::wydarzenie_changed, this, &MainWindow::wydarzenie_accepted);
+    for (int wiersz = 0; wiersz < (int)kafelki.size(); ++wiersz) {
+        for (int kolumna = 0; kolumna < (int)kafelki[0].size(); ++kolumna) {
+            connect(kafelki[wiersz][kolumna], &Kafelek::wydarzenie_changed,
+                    this, &MainWindow::wydarzenie_accepted);
         }
     }
     update_board();
 }
 
-void MainWindow::update_toolbar()
-{
-    ui->action_miesiac->setText(month_tab[month-1]);
+void MainWindow::update_toolbar() {
+    ui->action_miesiac->setText(month_tab[month - 1]);
     ui->action_rok->setText(std::to_string(year).c_str());
     update_board();
     update();
 }
 
-void MainWindow::update_board()
-{
+void MainWindow::update_board() {
     QDate first_of_month(year, month, 1);
-    QDate first_displayed = first_of_month.addDays(-(first_of_month.dayOfWeek() -1));
+    QDate first_displayed =
+        first_of_month.addDays(-(first_of_month.dayOfWeek() - 1));
 
-    for(int wiersz = 0; wiersz < (int)kafelki.size();++wiersz)
-    {
-        for(int kolumna = 0; kolumna < (int)kafelki[0].size();++kolumna)
-        {
+    for (int wiersz = 0; wiersz < (int)kafelki.size(); ++wiersz) {
+        for (int kolumna = 0; kolumna < (int)kafelki[0].size(); ++kolumna) {
             kafelki[wiersz][kolumna]->set_date(first_displayed);
-            kafelki[wiersz][kolumna]->set_displayed_month(first_of_month.month());
+            kafelki[wiersz][kolumna]->set_displayed_month(
+                first_of_month.month());
             auto wpisy = find_wpisy(first_displayed);
             kafelki[wiersz][kolumna]->set_wydarzenia(wpisy);
             first_displayed = first_displayed.addDays(1);
@@ -143,80 +131,66 @@ void MainWindow::update_board()
     update();
 }
 
-std::vector<Wydarzenie> MainWindow::find_wpisy(QDate date)
-{
+std::vector<Wydarzenie> MainWindow::find_wpisy(QDate date) {
     std::vector<Wydarzenie> wpisy_dnia;
-    for(const auto & wpis:wpisy)
-    {
-        if(wpis.getDate() == date)
-        {
+    for (const auto &wpis : wpisy) {
+        if (wpis.getDate() == date) {
             wpisy_dnia.push_back(wpis);
         }
     }
-    std::sort(begin(wpisy_dnia), end(wpisy_dnia), [](Wydarzenie a, Wydarzenie b){
-        return a.getTimeStart() < b.getTimeStart();
-    });
+    std::sort(begin(wpisy_dnia), end(wpisy_dnia),
+              [](Wydarzenie a, Wydarzenie b) {
+                  return a.getTimeStart() < b.getTimeStart();
+              });
     return wpisy_dnia;
 }
 
-
-
-void MainWindow::on_action_strzalka_w_gore_triggered()
-{
-    if(month == 12)
-    {
+void MainWindow::on_action_strzalka_w_gore_triggered() {
+    if (month == 12) {
         month = 0;
-        year ++;
+        year++;
     }
-    month ++;
+    month++;
     update_toolbar();
 }
 
-
-void MainWindow::on_action_strzalka_w_dol_triggered()
-{
-    month --;
-    if(month == 0)
-    {
+void MainWindow::on_action_strzalka_w_dol_triggered() {
+    month--;
+    if (month == 0) {
         month = 12;
-        year --;
+        year--;
     }
     update_toolbar();
 }
 
-void MainWindow::wydarzenie_accepted(Wydarzenie wydarzenie)
-{
+void MainWindow::wydarzenie_accepted(Wydarzenie wydarzenie) {
     bool znalezniono = false;
-    for(int i = 0; i < wpisy.size(); i++)
-    {
-        auto& wpis = wpisy[i];
-        if(wpis.getDate() == wydarzenie.getDate() and wpis.getTimeStart() == wydarzenie.getTimeStart() and wpis.getTimeEnd() == wydarzenie.getTimeEnd())
-        {
+    for (int i = 0; i < wpisy.size(); i++) {
+        auto &wpis = wpisy[i];
+        if (wpis.getDate() == wydarzenie.getDate() and
+            wpis.getTimeStart() == wydarzenie.getTimeStart() and
+            wpis.getTimeEnd() == wydarzenie.getTimeEnd()) {
             wpis = wydarzenie;
-            if (wpis.getText().isEmpty())
-            {
+            if (wpis.getText().isEmpty()) {
                 wpisy.erase(wpisy.begin() + 1);
             }
             znalezniono = true;
             break;
         }
     }
-    if(! znalezniono)
-    {
+    if (!znalezniono) {
         wpisy.push_back(wydarzenie);
     }
     repaint();
 }
 
-
-void MainWindow::on_actional_ma_kota_triggered()
-{
+void MainWindow::on_actional_ma_kota_triggered() {
     QFile file(wydarzenie_filename);
-    auto button = QMessageBox::question(this, "Question", "Reset the calendar database?");
-    if (button == QMessageBox::Yes)
-    {
+    auto button =
+        QMessageBox::question(this, "Question", "Reset the calendar database?");
+    if (button == QMessageBox::Yes) {
         file.remove();
-        wpisy.clear();        update_board();
+        wpisy.clear();
+        update_board();
     }
 }
-

@@ -1,16 +1,14 @@
-#include "mainwindow.h"
-
 #include <QApplication>
 #include <QFile>
 
-int main(int argc, char *argv[])
-{
+#include "mainwindow.h"
+
+int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
     QFile styleSheetFile("./Diffnes.qss");
     bool opened = styleSheetFile.open(QFile::ReadOnly);
-    if (!opened)
-    {
+    if (!opened) {
         styleSheetFile.setFileName("../kalendarz/Diffnes.qss");
         opened = styleSheetFile.open(QFile::ReadOnly);
     }
