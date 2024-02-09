@@ -1,19 +1,18 @@
 #ifndef WYDARZEINE_H
 #define WYDARZEINE_H
 
-#include <QDate>
-#include <QTime>
-#include <QString>
 #include <QDataStream>
+#include <QDate>
+#include <QString>
+#include <QTime>
 
-class Wydarzenie
-{
-public:
-    Wydarzenie(QDate date,QTime timestart, QTime timeend,QString text);
+class Wydarzenie {
+  public:
+    Wydarzenie(QDate date, QTime timestart, QTime timeend, QString text);
     Wydarzenie();
-    friend QDataStream& operator<<( QDataStream &out, const Wydarzenie& dane );
+    friend QDataStream &operator<<(QDataStream &out, const Wydarzenie &dane);
 
-    friend QDataStream& operator>>( QDataStream &in, Wydarzenie& dane );
+    friend QDataStream &operator>>(QDataStream &in, Wydarzenie &dane);
 
     const QDate &getDate() const;
     void setDate(const QDate &newDate);
@@ -27,15 +26,14 @@ public:
     const QString &getText() const;
     void setText(const QString &newText);
 
-private:
+  private:
     QDate date;
     QTime time_start;
     QTime time_end;
     QString text;
-
 };
 
-QDataStream& operator<<( QDataStream &out, const Wydarzenie& dane );
+QDataStream &operator<<(QDataStream &out, const Wydarzenie &dane);
 
-QDataStream& operator>>( QDataStream &in, Wydarzenie& dane );
+QDataStream &operator>>(QDataStream &in, Wydarzenie &dane);
 #endif // WYDARZEINE_H

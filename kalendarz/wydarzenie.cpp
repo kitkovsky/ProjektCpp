@@ -1,58 +1,27 @@
 #include "wydarzenie.h"
 
 Wydarzenie::Wydarzenie(QDate date, QTime timestart, QTime timeend, QString text)
-    :date(date), time_start(timestart), time_end(timeend), text(text)
-{
+    : date(date), time_start(timestart), time_end(timeend), text(text) {}
 
-}
+Wydarzenie::Wydarzenie() {}
 
-Wydarzenie::Wydarzenie()
-{
+const QDate &Wydarzenie::getDate() const { return date; }
 
-}
+void Wydarzenie::setDate(const QDate &newDate) { date = newDate; }
 
-const QDate &Wydarzenie::getDate() const
-{
-    return date;
-}
+const QTime &Wydarzenie::getTimeStart() const { return time_start; }
 
-void Wydarzenie::setDate(const QDate &newDate)
-{
-    date = newDate;
-}
+void Wydarzenie::setTimeStart(const QTime &newTime) { time_start = newTime; }
 
-const QTime &Wydarzenie::getTimeStart() const
-{
-    return time_start;
-}
+const QTime &Wydarzenie::getTimeEnd() const { return time_end; }
 
-void Wydarzenie::setTimeStart(const QTime &newTime)
-{
-    time_start = newTime;
-}
+void Wydarzenie::setTimeEnd(const QTime &newTime) { time_end = newTime; }
 
-const QTime &Wydarzenie::getTimeEnd() const
-{
-    return time_end;
-}
+const QString &Wydarzenie::getText() const { return text; }
 
-void Wydarzenie::setTimeEnd(const QTime &newTime)
-{
-   time_end = newTime;
-}
+void Wydarzenie::setText(const QString &newText) { text = newText; }
 
-const QString &Wydarzenie::getText() const
-{
-    return text;
-}
-
-void Wydarzenie::setText(const QString &newText)
-{
-    text = newText;
-}
-
-QDataStream &operator<<(QDataStream &out, const Wydarzenie &dane)
-{
+QDataStream &operator<<(QDataStream &out, const Wydarzenie &dane) {
     out << dane.date;
     out << dane.time_start;
     out << dane.time_end;
@@ -60,8 +29,7 @@ QDataStream &operator<<(QDataStream &out, const Wydarzenie &dane)
     return out;
 }
 
-QDataStream &operator>>(QDataStream &in, Wydarzenie &dane)
-{
+QDataStream &operator>>(QDataStream &in, Wydarzenie &dane) {
     in >> dane.date;
     in >> dane.time_start;
     in >> dane.time_end;
